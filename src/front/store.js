@@ -32,6 +32,20 @@ export default function storeReducer(store, action = {}) {
         ...store,
         todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
       };
+
+     case 'LOGIN':
+
+      return {
+        ...store,
+        isAuth: true
+      };
+
+    case 'LOGOUT':
+
+      return {
+        ...store,
+        isAuth: false
+      };
     default:
       throw Error('Unknown action.');
   }    
