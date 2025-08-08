@@ -46,7 +46,17 @@ export default function storeReducer(store, action = {}) {
         ...store,
         isAuth: false
       };
+
+    case 'SET_FAVORITOS':
+      
+      return {
+    ...store,
+    favoritos: action.payload,
+  };
+
+  
     default:
       throw Error('Unknown action.');
   }    
 }
+    

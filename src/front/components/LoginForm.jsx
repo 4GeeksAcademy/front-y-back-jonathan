@@ -22,7 +22,7 @@ export const LoginForm = () => {
          console.log(isLogged);
         if (isLogged) {
             dispatch({type:'LOGIN',payload:isLogged})
-            navigate("/")
+            navigate("/perfil")
         }
 
         
